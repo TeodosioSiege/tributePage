@@ -1,0 +1,164 @@
+
+/*1. Global Styles */
+:root {
+    --serif :  "Roboto Slab";
+    --sans-serif: "Roboto";
+    --bg-color: #F2E0D0;
+    --color: #543E1C;
+    --accent: #1C3054;
+    --tint: #E5D4C5;
+  }
+  
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   }
+  #main{
+    min-height: 100vh;
+  }
+  
+  /* 2. Typography Styles */
+  
+  #image {
+    max-width: 90%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .typography{
+    font-family: var(--sans-serif);
+    line-height: 1.5;
+  }
+  
+  #tribute-info {
+    text-align: justify;
+    padding: 5px;
+  }
+  
+  .other-resources {
+    text-align: center;
+  }
+  
+  
+  a {
+    font-style: italic;
+    color: var(--accent);
+  }
+  cite {
+    font-size: 0.75em;display: block;
+    width: 90%;
+    margin: 0 auto;
+  }
+  footer {
+    text-align: center;
+  }
+  
+  figcaption {
+    text-align: center;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--serif);
+    text-align: center;
+    color: var(--accent);
+  } 
+  
+  q {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  strong {
+    font-family: var(--serif);
+  }
+  
+  ul {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  /*3. Structure Styles */
+  
+  #main {
+    background-color: var(--bg-color);
+    color: var(--color);
+  }
+  
+  /*4. Module Styles */
+  
+  nav {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    justify-items: center;
+    margin: 0 auto;
+  }
+  .nav-item {
+    text-align:center;
+  }
+  
+  footer {
+    background-color: var(--tint);
+    padding: 5vh;
+  }
+  
+  /*5. Component Styles */
+  
+  li:hover {
+    animation-name: color-change;
+    animation-duration: 600ms;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes color-change {
+    100% {
+      background-color: var(--tint);
+    }
+  }
+  
+  .nav-item {
+    text-decoration: none;
+    border: 1px solid var(--accent);
+    padding: 5px 3px;
+    border-radius: 5px;
+  }
+  
+  .nav-item:hover {
+    animation-name: nav-anim;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes nav-anim {
+    100% {
+      transform: scale(1.1);
+      background-color: var(--accent);
+      color: var(--bg-color);
+    }
+  }
+  
+  /* non-mobile styles */
+  @media only screen AND (min-width: 480px){
+  h1{
+    font-size: 3rem;
+  }
+    
+    #image {
+      max-height: 80vh;
+    }
+    nav {
+      justify-content: space-evenly;
+    }
+    .nav-item {
+      padding: 5px 5px;
+    } 
+  }
+  
+  
+  
+  
+  
+  
